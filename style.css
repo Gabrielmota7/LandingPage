@@ -1,0 +1,66 @@
+body {
+    background-color: #FCE19D;
+}
+
+header {
+    background-color: #FCFDBA;
+    width: 100.5vw;
+    height: 7vh;
+    margin-top: 2vh;
+    margin: -16px;
+    align-items: center;
+}
+
+input { 
+   margin-top: 1.3vh;
+   height: 3vh;
+   width: 15vw;
+   border-radius: 5px;
+}
+
+
+
+ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+    /*justify-content: space-between;*/
+}
+li {
+    margin-top: 2vh;
+    list-style: none;
+}
+
+li :hover {
+    cursor: pointer;
+    color: red;
+}
+
+
+
+.logo-img {
+    width: 18vh;
+}
+
+.Pokeball {
+    width: 4%;
+    margin-right: 0.7%;
+    
+}
+
+.pikachu-paragraph {
+    inline-size: 215px;
+    font-size: 50px;
+    font: bold;
+}
+
+.pikaImg {
+    width: 50vh;
+}
+
+
+.world {
+    margin-top: 10%;
+    margin-left: 11vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
