@@ -9,7 +9,14 @@ header {
     margin-top: 2vh;
     margin: -16px;
     align-items: center;
+    
 }
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 102%;
+  }
 
 input { 
    margin-top: 1.3vh;
@@ -18,11 +25,14 @@ input {
    border-radius: 5px;
 }
 
-
+a {
+    color: black;
+    text-decoration: none;
+}
 
 ul {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 0.8fr;
     /*justify-content: space-between;*/
 }
 li {
@@ -33,6 +43,20 @@ li {
 li :hover {
     cursor: pointer;
     color: red;
+}
+
+h1 {
+    text-align: center;
+}
+
+footer {
+    background-color: #FCFDBA;
+    text-align: center;
+    font-weight: bold;
+    width: 100.5vw;
+    height: 5vh;
+    margin-top: 2vh;
+    margin: -16px;
 }
 
 
@@ -59,8 +83,208 @@ li :hover {
 
 
 .world {
-    margin-top: 10%;
+    margin-top: 2%;
     margin-left: 11vw;
     display: grid;
     grid-template-columns: 1fr 1fr;
+}
+
+.adventure {
+    margin-top: 5%;
+    margin-left: 11vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.celebiImg {
+    width: 45vh;
+}
+
+.celebi-paragraph {
+    inline-size: 220px;
+    font-size: 45px;
+    font: bold;
+}
+
+.pokedex {
+    margin-top: 5%;
+    margin-left: 11vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.pokedex-paragraph {
+    inline-size: 400px;
+    font-size: 50px;
+    font: bold;
+}
+
+.muchImg {
+    width: 45vh;
+}
+
+.pokemonRed {
+    width: 60vh;
+}
+
+.games-paragraph {
+    inline-size: 400px;
+    font-size: 30px;
+    font: bold;
+}
+
+.games {
+    margin-top: 5%;
+    margin-left: 11vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.anime {
+    margin-top: 5%;
+    margin-left: 11vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.ashImg {
+    width: 60vh;
+}
+
+.anime-paragraph {
+    inline-size: 400px;
+    font-size: 30px;
+    font: bolder;
+}
+
+.manga{
+    margin-top: 5%;
+    margin-left: 11vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.redImg {
+    width: 50vh;
+}
+
+.manga-paragraph {
+    inline-size: 500px;
+    font-size: 30px;
+    font: bolder;
+}
+
+@media (max-width: 600px) {
+    header {
+        width: 106%;
+    }
+
+    input { 
+        height: 3vh;
+        width: 18vw;
+     }
+
+    .Pokeball {
+        width: 10%;
+        margin-right: 0.7%;
+        
+    }
+
+    .pikachu-paragraph {
+        inline-size: 100px;
+        font-size: 25px;
+        font-weight: bold;
+    }
+    
+    .pikaImg {
+        width: 25vh;
+    }
+
+    .world {
+        margin-top: 7%;
+    }
+
+    .adventure {
+        margin-top: 5%;
+        grid-template-columns: 2fr 1.5fr;
+    }
+    
+    .celebiImg {
+        width: 23vh;
+    }
+    
+    .celebi-paragraph {
+        inline-size: 100px;
+        font-size: 25px;
+        font-weight: bold;
+    }
+
+    .pokedex {
+        margin-top: 5%;
+        margin-left: 11vw;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .pokedex-paragraph {
+        inline-size: 140px;
+        font-size: 25px;
+        font-weight: bold;
+    }
+    
+    .muchImg {
+        width: 21vh;
+    }
+
+    .pokemonRed {
+        width: 28vh;
+    }
+    
+    .games-paragraph {
+        inline-size: 330px;
+        font-size: 15px;
+        font-weight: bold;
+    }
+    
+    .games {
+        margin-top: 5%;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+        margin-left: 5vw;
+    }
+
+    .anime {
+        margin-left: 5vw;
+        display: grid;
+        grid-template-columns: 2fr;
+        justify-items: center;
+    }
+    
+    .ashImg {
+        width: 25vh;
+    }
+    
+    .anime-paragraph {
+        inline-size: 330px;
+        font-size: 15px;
+        font-weight: bold;
+    }
+    
+    .manga{
+        margin-left: 5vw;
+        display: grid;
+        grid-template-columns: 2fr;
+        justify-items: center;
+    }
+    
+    .redImg {
+        width: 30vh;
+    }
+    
+    .manga-paragraph {
+        inline-size: 330px;
+        font-size: 15px;
+        font-weight: bold;
+    }
 }

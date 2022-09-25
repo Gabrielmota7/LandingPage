@@ -1,39 +1,129 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Adicionando smooth para todos os links
+            $("a").on('click', function (event) {
+
+                // fazendo com que o valor do this.hash esteja certo em todo tempo
+                if (this.hash !== "") {
+
+                    event.preventDefault();
+
+                    // Salvando valor hash
+                    var hash = this.hash;
+
+                    // Usando jQuery para adicionar smooth de rolanmento de página
+                    // Adicionando onde deve ser usado o método e colocando periodo de tempo para scrolar a página
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function () {
+
+                        //Colocando que sempre que o hash(#) for colado deve ativar a função
+                        window.location.hash = hash;
+                    });
+                } // fim
+
+
+                window.onscroll = function () { myFunction() };
+
+                var header = document.getElementById("Header");
+                var sticky = header.offsetTop;
+
+                function myFunction() {
+                    if (window.pageYOffset > sticky) {
+                        header.classList.add("sticky");
+                    } else {
+                        header.classList.remove("sticky");
+                    }
+                }
+
+            });
+        });
+    </script>
 </head>
+
 <body>
     <div class="Logo">
-        <img class="logo-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/2560px-International_Pok%C3%A9mon_logo.svg.png" alt="">
+        <img class="logo-img"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/2560px-International_Pok%C3%A9mon_logo.svg.png"
+            alt="">
     </div>
-    <header>
+    <header id="Header">
         <ul>
             <li>
-                <a><img class="Pokeball" src="img/pokeball.png" alt="">Home</a>
+                <a href="#home"><img class="Pokeball" src="img/pokeball.png" alt="">Home</a>
             </li>
             <li>
-                <a><img class="Pokeball" src="img/pokeball.png" alt="">Pokedex</a>
+                <a href="#Pokedex"><img class="Pokeball" src="img/pokeball.png" alt="">Pokedex</a>
             </li>
             <li>
-                <a><img class="Pokeball" src="/img/Pokeball.png" alt="">Story</a>
+                <a href="#Story"><img class="Pokeball" src="/img/Pokeball.png" alt="">Story</a>
             </li>
-            
+
             <input type="Search"></input>
-            
+
         </ul>
-        
+
     </header>
     <main>
-        <div class="world">
+        <div id="home" class="world">
             <p class="pikachu-paragraph">Welcome to the amazing world of Pokemon!</p>
             <img class="pikaImg" src="img/pikachu.png" alt="pikachu">
         </div>
         <hr>
+        <div class="adventure">
+            <img class="celebiImg" src="img/CelebiPNG.png" alt="">
+            <p class="celebi-paragraph">Greats adventures await you !</p>
+        </div>
+        <hr>
+        <div id="Pokedex" class="pokedex">
+            <p class="pokedex-paragraph">The Pokedex is work out, wait for a amazing wiki of Pokemon</p>
+            <img class="muchImg" src="img/muchlax.png" alt="muchlax">
+        </div>
+        <hr>
+        <div id="Story" class="series">
+            <h1>Games</h1>
+        </div>
+        <div class="games">
+            <img class="pokemonRed" src="img/pokemonRedGame.png" alt="logoGame">
+            <p class="games-paragraph">Pokémon é uma série de jogos eletrônicos desenvolvidos pela Game Freak e
+                publicados pela Nintendo como parte da franquia de mídia Pokémon. Lançado pela primeira vez em 1996 no
+                Japão para o console Game Boy,
+                a principal série de jogos de RPGs, que continuou em cada geração em portáteis da Nintendo. </p>
+        </div>
+        <hr>
+        <h1>Anime</h1>
+        <div class="anime">
+            <img class="ashImg" src="img/Ash.png" alt="Ash">
+            <p class="anime-paragraph">O anime de Pokémon, frequentemente referido apenas como "o anime" pelos fãs, é um
+                termo coletivo que se refere aos mais de 1.180 episódios da série principal, 23 filmes e uma série de
+                histórias paralelas, spin-offs e curtas, todos sobre Pokémon. A grande maioria desses se foca na
+                história de Ash Ketchum, um Treinador Pokémon da Cidade de Pallet,
+                e sua jornada em busca de se tornar um Mestre Pokémon, seus vários amigos, e principalmente em seus
+                Pokémon, os quais ele considera seus companheiros e amigos.</p>
+        </div>
+        <hr>
+        <h1>Manga</h1>
+        <div class="manga">
+            <img class="redImg" src="img/Red.png" alt="Red">
+            <p class="manga-paragraph">Pokemon Special, também conhecido como Pokémon Adventures, é um mangá baseado nos
+                jogos eletrônicos de Pokémon.
+                Pokemon Special é o mangá de Pokémon mais famoso já criado, com mais de 150 milhões de unidades vendidas
+                no mundo inteiro.</p>
+        </div>
     </main>
+    <footer>
+        <p>All rights reserved to Pokemon Company &#169 2022</p>
+    </footer>
 </body>
+
 </html>
